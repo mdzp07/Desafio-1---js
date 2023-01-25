@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - JS</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://kit.fontawesome.com/61229d1a8c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="card">
+        <div><img src="/assets/img/blue.png" alt="Rubicon Azul"></div>
+        <h2>Jeep Wrangler Rubicon</h2>
+        <p><strong> Valor: <span id="precio">$40.000.000</span> </p></strong>
+        <h4>Cantidad:
+            <input type="number" id="number">
+        </h4>
+        <h4>Color: <select onchange="
+                document.querySelector('.fa-solid').style.color=document.querySelector('select').value;            
+                " name="color" id="">
+                <option value="">-</option>
+                <option value="blue">Azul</option>
+                <option value="red">Rojo</option>
+                <option value="green">Verde</option>
+            </select>
+        </h4>
+        <button onclick="
+        entrada=document.querySelector('#number').value;
+        valor=40000000;
+        total=entrada*valor;
+        totalstring=total.toLocaleString();
+        total1= '$ '+ totalstring + ' CLP';
+        document.querySelector('#total-cotizacion').innerHTML=total1;
+        document.querySelector('#total-cotizacion').style='color: red';
+
+               
+        ">Cotizar</button>
+
+        <div class="cotizacion">
+            <h5>Color: <i class="fa-solid fa-car"></i></h5>
+            <div class="totalprice">
+                <h5> Total: </h5>
+                <h5 id="total-cotizacion">$0</h5>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
